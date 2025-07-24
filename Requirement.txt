@@ -1,0 +1,9 @@
+torch>=1.12
+
+stable-baselines3
+
+webots
+
+opencv-python
+
+matplotlib
