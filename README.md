@@ -41,7 +41,8 @@ matplotlib
 
 
 ### Results
-
+<div align="center">
+  
 | Method           | RMSE (m)  | Std Dev (m) | nRMSE      |
 | ---------------- | --------- | ----------- | ---------- |
 | DDPG             | 0.242     | 0.121       | 0.0484     |
