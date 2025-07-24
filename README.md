@@ -23,8 +23,6 @@ This multimodal state representation enables the agent to make robust, interpret
 
 torch>=1.12
 
-transformers
-
 stable-baselines3
 
 webots
@@ -32,6 +30,8 @@ webots
 opencv-python
 
 matplotlib
+
+
 
 
 
