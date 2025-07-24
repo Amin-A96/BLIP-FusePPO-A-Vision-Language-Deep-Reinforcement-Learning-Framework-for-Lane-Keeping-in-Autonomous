@@ -47,5 +47,9 @@ This multimodal representation improves robustness and interpretability, achievi
 | VL-SAFE          | 0.198     | 0.099       | 0.0396     |
 | **BLIP-FusePPO** | **0.110** | **0.055**   | **0.0220** |
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f831edb6-286c-42dd-8148-69ba3d56a674" alt="plot_result" width="600">
+</p>
+<p align="center"><i>Fig. 2 – Training performance of BLIP-FusePPO over episodes</i></p>
 
 
