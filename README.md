@@ -16,7 +16,7 @@ As shown in Fig. 1,To address these issues, we propose BLIP-FusePPO, a novel rei
 🧠 Semantic embeddings from a Vision-Language Model (BLIP) for high-level contextual reasoning
 
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/32be8278-b08f-4cda-9a75-c18c5260403d" alt="Proposed Method: BLIP-FusePPO" width="600"> </p> <p align="center"><i>Fig. 1 – Proposed BLIP-FusePPO framework </i></p>
+<p align="center"> <img src="https://github.com/user-attachments/assets/32be8278-b08f-4cda-9a75-c18c5260403d" alt="Proposed Method: BLIP-FusePPO" width="800"> </p> <p align="center"><i>Fig. 1 – Proposed BLIP-FusePPO framework </i></p>
 
 ### Requirements
 
