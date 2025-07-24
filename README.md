@@ -22,10 +22,15 @@ This multimodal state representation enables the agent to make robust, interpret
 ### Requirements
 
 torch>=1.12
+
 transformers
+
 stable-baselines3
+
 webots
+
 opencv-python
+
 matplotlib
 
 
