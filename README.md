@@ -39,6 +39,12 @@ matplotlib
 ### Results
 This multimodal representation improves robustness and interpretability, achieving lower RMSE and nRMSE than methods like DDPG and VL-SAFE.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f831edb6-286c-42dd-8148-69ba3d56a674" alt="plot_result" width="800">
+</p>
+<p align="center"><i>Fig. 2 – Training performance of BLIP-FusePPO over episodes</i></p>
+
+
 <div align="center"><p align="center"><i>Table 1 – Performance comparison of BLIP-FusePPO with baseline methods in terms of RMSE and nRMSE</i></p>
   
 | Method           | RMSE (m)  | Std Dev (m) | nRMSE      |
@@ -47,9 +53,6 @@ This multimodal representation improves robustness and interpretability, achievi
 | VL-SAFE          | 0.198     | 0.099       | 0.0396     |
 | **BLIP-FusePPO** | **0.110** | **0.055**   | **0.0220** |
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/f831edb6-286c-42dd-8148-69ba3d56a674" alt="plot_result" width="600">
-</p>
-<p align="center"><i>Fig. 2 – Training performance of BLIP-FusePPO over episodes</i></p>
+
 
 
