@@ -1,6 +1,8 @@
 # Vision-Language-Model-Guided-Lane-Keeping-using-PPO-with-PID-Based-State-Augmentation
 
 ### Overviews
+<div align="justify">
+
 
 Autonomous lane-keeping in real-world environments remains a challenging task due to partial observability, complex scene dynamics, and limited generalization in traditional vision-based RL systems.
 As shown in Fig. 1,To address these issues, we propose BLIP-FusePPO, a novel reinforcement learning framework that combines:
