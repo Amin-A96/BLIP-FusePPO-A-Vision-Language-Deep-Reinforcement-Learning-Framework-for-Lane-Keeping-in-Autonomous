@@ -1,120 +1,130 @@
-# 🚗 Vision-Language Model Guided Lane Keeping using PPO with PID-Based State Augmentation
+# 🚗 Vision-Language Model-Guided Lane Keeping via PPO with PID-Based State Augmentation
 
 ## Overview
-<div align="justify">
 
-Autonomous lane keeping in real-world environments remains a challenging task due to partial observability, complex scene dynamics, and the limited generalization capabilities of traditional vision-based reinforcement learning (RL) systems.  
-To address these issues, we introduce **BLIP-FusePPO** — a novel multimodal RL framework that fuses the strengths of both classical and modern AI approaches:
+Autonomous lane keeping in real-world conditions remains a complex challenge due to partial observability, sensor noise, and dynamic environments. To address these issues, we introduce **BLIP-FusePPO** — a novel multimodal reinforcement learning (RL) framework that integrates vision-language semantics, LiDAR perception, and classical control signals within a unified state representation.
+
+**BLIP-FusePPO** enriches the policy learning process through:
 
 - 📷 **RGB Visual Input** from a front-facing camera  
-- 📡 **LiDAR-based Range Data** for spatial awareness  
-- 🧮 **PID Control Feedback** for stability and low-level prior knowledge  
-- 🧠 **Semantic Embeddings from a Vision-Language Model (BLIP)** for contextual reasoning
+- 📡 **LiDAR Range Measurements** for spatial awareness  
+- 🧮 **PID-based Control Feedback** to stabilize learning and improve interpretability  
+- 🧠 **Semantic Embeddings** from a pretrained Vision-Language Model (BLIP) for scene understanding
 
-By integrating these signals (see Fig. 1), BLIP-FusePPO enables robust, context-aware lane keeping that is both interpretable and sample efficient.
-
-</div>
+This fusion enables robust, interpretable, and sample-efficient decision-making in both structured and ambiguous driving scenarios.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/32be8278-b08f-4cda-9a75-c18c5260403d"
-       alt="Proposed Method: BLIP-FusePPO" width="800">
+  <img src="https://github.com/user-attachments/assets/32be8278-b08f-4cda-9a75-c18c5260403d" alt="BLIP-FusePPO Pipeline" width="1500">
 </p>
-<p align="center"><i>Fig. 1 – The BLIP-FusePPO framework</i></p>
+<p align="center"><i>Fig. 1 – Architecture of the BLIP-FusePPO framework</i></p>
 
 ---
 
-## Features
+## 🔍 Key Features
 
-- Unified state representation fusing camera, LiDAR, PID, and BLIP-derived semantic embeddings
-- PPO-based policy learning with control-aware and semantic state augmentation
-- Hybrid reward function incorporating lane adherence, obstacle avoidance, speed regulation, and semantic alignment
-- Symmetry-aware data augmentation for improved generalization
-- Ready for Webots-based simulation environments
+- **Hybrid State Representation** integrating visual, geometric, control, and semantic signals  
+- **PPO-based Policy Optimization** adapted for multimodal continuous control  
+- **PID-Guided State Augmentation** for improved robustness and faster convergence  
+- **Semantic Embedding Injection** directly into the agent's observation space (not just reward shaping)  
+- **Hybrid Reward Function** balancing semantic alignment, lane adherence, obstacle avoidance, and velocity regulation  
+- **Symmetry-Aware Data Augmentation** to improve generalization in diverse road geometries  
+- **Realistic Webots Simulation Support** for high-fidelity evaluation
 
 ---
 
-## Requirements
+## 🧰 Requirements
 
-- torch>=1.12  
-- stable-baselines3  
-- webots  
-- opencv-python  
-- matplotlib  
-- transformers    <!-- for BLIP or Huggingface models -->  
-- numpy
+Install dependencies:
 
-Install all dependencies via:
 ```bash
 pip install -r requirements.txt
-```
-Or install individually as needed.
+````
 
-## Quick Start
+Required packages include:
 
-1. **Clone this repository:**
-
-```bash
-git clone https://github.com/your_username/blip-fuseppo.git
-cd blip-fuseppo
-```
-
-2. **Configure Webots environment**
-
-Ensure you have Webots installed and the simulation world set up for lane-keeping.
-
-3. **Train the BLIP-FusePPO agent:**
-
-```bash
-python train.py --config configs/blip_fuseppo.yaml
-```
-Modify configuration files as needed for your environment.
+* `torch >= 1.12`
+* `stable-baselines3`
+* `webots`
+* `opencv-python`
+* `matplotlib`
+* `numpy`
 
 ---
 
-## Results
+## 🚀 Quick Start
 
+1. **Clone the repository**
 
-This multimodal fusion framework improves robustness and interpretability and achieves lower RMSE and nRMSE compared to state-of-the-art methods such as DDPG and VL-SAFE.
+👉 [Click here to open the GitHub repository](https://github.com/Seyed07/Vision-Language-Model-Guided-Lane-Keeping-using-PPO-with-PID-Based-State-Augmentation)
+
+```bash
+git clone https://github.com/Seyed07/Vision-Language-Model-Guided-Lane-Keeping-using-PPO-with-PID-Based-State-Augmentation.git
+```
+2. **Configure Webots environment**
+
+Ensure Webots is installed and the simulation world for lane keeping is prepared.
+
+3. **Train the RL agent:**
+
+```bash
+python train.py 
+```
+
+You can modify hyperparameters and observation modalities through the config file.
+
+---
+
+## 📊 Results
+
+**BLIP-FusePPO** outperforms conventional and state-of-the-art multimodal baselines (e.g., DDPG, VL-SAFE) in both lateral control accuracy and robustness.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/f831edb6-286c-42dd-8148-69ba3d56a674"
-       alt="plot_result" width="800">
+  <img src="https://github.com/user-attachments/assets/f831edb6-286c-42dd-8148-69ba3d56a674" alt="Training Performance" width="1000">
 </p>
-<p align="center"><i>Fig. 1 – Training performance of BLIP-FusePPO over episodes</i></p>
+<p align="center"><i>Fig. 2 – Training performance over episodes</i></p>
 
 <div align="center">
 
+| Method           | RMSE (m)  | Std Dev (m) | nRMSE      |
+| ---------------- | --------- | ----------- | ---------- |
+| DDPG             | 0.242     | 0.121       | 0.0484     |
+| VL-SAFE          | 0.198     | 0.099       | 0.0396     |
+| **BLIP-FusePPO** | **0.110** | **0.055**   | **0.0220** |
 
-| Method | RMSE (m) | Std Dev (m) | nRMSE |
-|--------|----------|-------------|-------|
-| DDPG | 0.242 | 0.121 | 0.0484 |
-| VL-SAFE | 0.198 | 0.099 | 0.0396 |
-| BLIP-FusePPO | 0.110 | 0.055 | 0.0220 |
-
-<p align="center"><i>Table 2 – Performance comparison with baselines</i></p>
+<p align="center"><i>Table 3 – Quantitative evaluation over 100 test episodes</i></p>
 
 </div>
 
+## 🧭 Curved Road Handling
 
-
-### 🎥 Video Demonstration
-
-### 🚘 Lane Keeping in Curved Roads
+BLIP-FusePPO maintains lane adherence even on sharply curved roads:
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/07c1768e-9f59-4a43-aee2-0847fe5a4ee2" alt="Right Curve" width="45%" style="display:inline-block; margin-right: 10px;">
   <img src="https://github.com/user-attachments/assets/dfa1b293-42e4-4745-a1d2-01e33cbc8599" alt="Left Curve" width="45%" style="display:inline-block;">
 </p>
+<p align="center"><i>Fig. 4 – Lane-keeping behavior of BLIP-FusePPO on challenging curved roads.  
+Left: The agent maintains stability on a right turn; Right: The policy successfully handles a left bend with minimal lateral deviation.  
+These results demonstrate the model's robustness and generalization across asymmetric road geometries.</i></p>
 
-<p align="center">
-  <b>Left:</b> Right Curve &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>Right:</b> Left Curve
-</p>
 
-## Acknowledgments
 
-This research was conducted at the Department of Electrical Engineering, Amirkabir University of Technology (Tehran Polytechnic).
-## Contact
+## 🏛 Acknowledgments
 
-For questions or collaborations, please open an issue or email the corresponding author:
+This work was developed at the **Department of Electrical Engineering**, Amirkabir University of Technology (Tehran Polytechnic)
+---
 
-**Seyed Ahmad Hosseini Miangoleh** — ahmadhosseini@aut.ac.ir
+## 📬 Contact
+
+For technical questions or collaboration opportunities:
+
+**Seyed Ahmad Hosseini Miangoleh**
+📧 [seyedahmad.hosseini@aut.ac.ir](mailto:seyedahmad.hosseini@aut.ac.ir)
+
+**Amin Jalal Aghdasian**
+📧 [amin.aghdasian@aut.ac.ir](mailto:amin.aghdasian@aut.ac.ir)
+
+**Dr. Farzaneh Abdollahi**
+📧 [f_abdollahi@aut.ac.ir](mailto:f_abdollahi@aut.ac.ir)
+
+---
