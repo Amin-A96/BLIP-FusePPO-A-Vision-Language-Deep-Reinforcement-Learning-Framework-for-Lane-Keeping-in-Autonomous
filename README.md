@@ -79,7 +79,7 @@ You can modify hyperparameters and observation modalities through the config fil
 **BLIP-FusePPO** outperforms conventional and state-of-the-art multimodal baselines (e.g., DDPG, VL-SAFE) in both lateral control accuracy and robustness.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/f831edb6-286c-42dd-8148-69ba3d56a674" alt="Training Performance" width="1000">
+<img width="4500" height="960" alt="plot_result" src="https://github.com/user-attachments/assets/aa91aee2-9511-4af1-a75f-2f84b983c896" />
 </p>
 <p align="center"><i>Fig. 2 – Training performance over episodes</i></p>
 
