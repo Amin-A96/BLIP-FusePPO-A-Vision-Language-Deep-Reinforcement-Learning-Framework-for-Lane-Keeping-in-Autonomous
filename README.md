@@ -1,4 +1,4 @@
-# 🚗 Vision-Language Model-Guided Lane Keeping via PPO with PID-Based State Augmentation
+# 🚗 BLIP-FusePPO: A Vision-Language Deep Reinforcement Learning Framework for Lane Keeping in Autonomous Vehicles
 
 ## Overview
 
