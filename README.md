@@ -113,10 +113,6 @@ A detailed description of this framework is available in our preprint:
 
 **[BLIP-FusePPO: A Vision-Language Deep Reinforcement Learning Framework for Lane Keeping in Autonomous Vehicles](https://arxiv.org/abs/2510.22370)**  
 
-> _arXiv preprint_, 2025.
-
-
-
 ## 📚 Citation
 If you use this work, please cite it as:
 ```bibtex
