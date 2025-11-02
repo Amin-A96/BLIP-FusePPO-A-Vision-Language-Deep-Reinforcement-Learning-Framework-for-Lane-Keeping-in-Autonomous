@@ -1,5 +1,6 @@
 # 🚗 BLIP-FusePPO: A Vision-Language Deep Reinforcement Learning Framework for Lane Keeping in Autonomous Vehicles
- 
+📄 **Paper:** [arXiv:2510.22370](https://www.arxiv.org/abs/2510.22370)
+
 ## Overview
 
 Autonomous lane keeping in real-world conditions remains a complex challenge due to partial observability, sensor noise, and dynamic environments. To address these issues, we introduce **BLIP-FusePPO** — a novel multimodal reinforcement learning (RL) framework that integrates vision-language semantics, LiDAR perception, and classical control signals within a unified state representation.
@@ -107,10 +108,31 @@ Left: The agent maintains stability on a right turn; Right: The policy successfu
 These results demonstrate the model's robustness and generalization across asymmetric road geometries.</i></p>
 
 
+## 📄 Paper
+A detailed description of this framework is available in our preprint:
 
+**[BLIP-FusePPO: A Vision-Language Deep Reinforcement Learning Framework for Lane Keeping in Autonomous Vehicles](https://arxiv.org/abs/2510.22370)**  
+
+> _arXiv preprint_, 2025.
+
+
+
+## 📚 Citation
+If you use this work, please cite it as:
+```bibtex
+@misc{miangoleh2025blipfuseppovisionlanguagedeepreinforcement,
+      title={BLIP-FusePPO: A Vision-Language Deep Reinforcement Learning Framework for Lane Keeping in Autonomous Vehicles}, 
+      author={Seyed Ahmad Hosseini Miangoleh and Amin Jalal Aghdasian and Farzaneh Abdollahi},
+      year={2025},
+      eprint={2510.22370},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2510.22370}, 
+}
+```
 ## 🏛 Acknowledgments
-
 This work was developed at the **Department of Electrical Engineering**, Amirkabir University of Technology (Tehran Polytechnic)
+
 ---
 
 ## 📬 Contact
