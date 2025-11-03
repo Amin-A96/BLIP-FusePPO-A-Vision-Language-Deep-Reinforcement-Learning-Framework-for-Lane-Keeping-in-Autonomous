@@ -56,7 +56,6 @@ Required packages include:
 
 1. **Clone the repository**
 
-👉 [Click here to open the GitHub repository](https://github.com/Seyed07/BLIP-FusePPO-A-Vision-Language-Deep-Reinforcement-Learning-Framework-for-Lane-Keeping-in-Autonomous)
 ```bash
 git clone https://github.com/Amin-A96/BLIP-FusePPO-A-Vision-Language-Deep-Reinforcement-Learning-Framework-for-Lane-Keeping-in-Autonomous.git
 ```
